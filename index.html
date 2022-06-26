@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tip calculator app</title>
+    <link rel="shortcut icon" href="images/favicon-32x32.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <main>
+        <section id="left">
+            <div id="bill">
+                <label for="bill" class="txtlabel">Conta</label>
+                <input type="number" name="bill" placeholder="0" id="pholderbill">
+            </div>
+            <div id="send">
+                <label for="numpeople" class="txtlabel">Número de Pessoas</label>
+                <p id="txterror"></p>
+                <input type="number" name="numpeople" placeholder="0" id="pholdernum">
+            </div>
+            <div id="tip">
+                <p class="txtlabel">Taxa de serviço</p>
+                <form>
+                    <div id="options">
+                        <div id="options1">
+                            <input type="radio" name="tip" id="tip5" value="5" class="opinput"><label for="tip5" class="tipop">5%</label>
+                            <input type="radio" name="tip" id="tip10" value="10" class="opinput"><label for="tip10" class="tipop">10%</label>
+                            <input type="radio" name="tip" id="tip15" value="15" class="opinput"><label for="tip15" class="tipop">15%</label>
+                        </div>
+                        <div>
+                            <input type="radio" name="tip" id="tip25" value="25" class="opinput"><label for="tip25" class="tipop">25%</label>
+                            <input type="radio" name="tip" id="tip50" value="50" class="opinput"><label for="tip50" class="tipop">50%</label>
+                            <!--<input type="radio" name="tip" id="tip12" value="12" class="opinput"><label for="tip12" class="tipop">12%</label>-->
+                        </div>
+                    </div>
+                    <button type="submit">ENVIAR</button>
+                </form>
+            </div>
+        </section>
+        <section id="right">
+            <div class="total">
+                <div class="restxt">
+                    <p class="txttop">Gorjeta</p>
+                    <p class="txtbotton">/pessoa</p>
+                </div>
+                <div id="txtrestip">R$ 0.00</div>
+            </div>
+            <div class="total">
+                <div class="restxt">
+                    <p class="txttop">Total</p>
+                    <p class="txtbotton">/pessoa</p>
+                </div>
+                <div id="txtrestotal">R$ 0.00</div>
+            </div>
+            <input type="button" value="Reset" id="reset" onclick="reset()">
+        </section>
+    </main>
+    
+</body>
+</html>

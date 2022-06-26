@@ -1,0 +1,190 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:wght@700&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
+}
+:root{
+    --verydarkcyan: hsl(183, 100%, 15%);
+    --darkcyan: hsl(186, 14%, 43%);
+    --grayishcyan: hsl(184, 14%, 56%);
+    --verylightcyan: hsl(185, 41%, 84%);
+    --lightcyan: hsl(189, 41%, 97%);
+}
+body{
+    background-color: var(--verylightcyan);
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+main{
+    background-color: white;
+    width: 50%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 1rem;
+}
+#bill, #people{
+    display: flex;
+    flex-direction: column;
+}
+#left{
+    width: 50%;
+    margin: 0% 0% 0% 5%;
+    
+}
+.txtlabel{
+    color: var(--grayishcyan);
+    font-size: 10pt;
+}
+
+#pholderbill{
+    font-size: 18px;
+    background-color: var(--lightcyan);
+    background-image: url('images/icon-dollar.svg');
+    background-position: 0.5rem 0.25rem;
+    background-repeat: no-repeat;
+    border-color: transparent;
+    padding-left: 1rem;
+    height: 50%;
+    margin-bottom: 1rem;
+    text-align: right;
+    color: var(--verydarkcyan);
+}
+#pholderbill::-webkit-outer-spin-button,  #pholderbill::-webkit-inner-spin-button, #pholdernum::-webkit-outer-spin-button,#pholdernum::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+#pholderbill::placeholder{
+    color: var(--grayishcyan);
+    text-align: right;
+    padding-right: 0.5rem;
+    width: 100%;
+}
+#pholderbill:focus, #pholdernum:focus{
+    outline: none;
+    text-align: right;
+    color: var(--verydarkcyan);
+    border: 0.15rem solid var(--verylightcyan);
+    border-radius: 0.2rem;
+}
+#pholdernum{
+    font-size: 18px;
+    background-color: var(--lightcyan);
+    background-image: url('images/icon-person.svg');
+    background-position: 0.5rem 50%;
+    background-repeat: no-repeat;
+    border-color: transparent;
+    padding-left: 1rem;
+    height: 50%;
+    margin-bottom: 1rem;
+    text-align: right;
+    color: var(--verydarkcyan);
+    width: 100%;
+}
+#pholdernum::placeholder{
+    color: var(--grayishcyan);
+    text-align: right;
+    padding-right: 0.5rem;
+    width: 100%;
+}
+#txterror{
+    display: flex;
+    justify-content: right;
+    font-size: 0.6rem;
+    color: red;
+}
+form{
+    display: flex;
+    flex-direction: column;
+}
+.tipop{
+    cursor: pointer;
+    color: white;
+    background-color: var(--verydarkcyan);
+    padding: 0.5rem 1rem;
+    border-radius: 0.5rem;
+}
+.opinput{
+    display: none;
+}
+.opinput:checked + .tipop{
+    background-color: var(--verylightcyan);
+    color: var(--verydarkcyan);
+}
+#options{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+#options1{
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+button{
+    height: 2rem;
+    border-radius: 0.3rem;
+    border-color: var(--darkcyan);
+    background-color: var(--darkcyan);
+    color: var(--grayishcyan);
+    text-transform: uppercase;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+#right{
+    background-color: var(--verydarkcyan);
+    width: 50%;
+    height: 20rem;
+    margin: 5% 5% 5% 5%;
+    border-radius: 1rem;
+    text-align: center; 
+}
+.total{
+    display: flex;
+    justify-content: space-around;
+    margin: 0.5rem;
+    margin-bottom: 4rem;
+    margin-top: 2rem;
+    padding-top: 0.4rem;
+}
+.txttop{
+    color: white;
+    font-size: 12pt;
+    text-align: left;
+}
+.txtbotton{
+    color: var(--grayishcyan);
+    font-size: 8pt;
+    text-align: left;
+}
+#txtrestip, #txtrestotal{
+    color: var(--darkcyan);
+    font-size: 20pt;
+    text-align: right;
+}
+
+#reset{
+    width: 90%;
+    height: 2rem;
+    margin-top: 0.8rem;
+    border-radius: 0.3rem;
+    border-color: var(--darkcyan);
+    background-color: var(--darkcyan);
+    color: var(--grayishcyan);
+    text-transform: uppercase;
+    cursor: pointer;
+}
+#reset:active{
+    color: var(--verydarkcyan);
+    background-color: var(--verylightcyan);
+}
+
+
